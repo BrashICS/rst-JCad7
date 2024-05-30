@@ -8,41 +8,37 @@ Author: Julian Cadieux
 <html>
 <head>
   <title>Hangman</title>
+  <script src="https://misterbrash.github.io/Hangman_DB/hangman_helper.js" defer></script>
   <link rel="stylesheet" href="/myCode/style.css">
   <script src="/myCode/script.js" defer></script>
-  <script src="https://misterbrash.github.io/Hangman_DB/hangman_helper.js" defer></script>
+
 </head>
 
 <body>
-  <h2>Chose a topic by entering in the text boc and then clicking the button.</h2>
   <form>
     <fieldset>
-      <legend>Select a maintenance drone:</legend>
+      <legend><h2>Select a topic:</h2></legend>
 
       <div>
-        <input type="radio" id="nhl_teams" name="topics" value="nhl_teams" checked />
-        <label for="nhl_teams">NHL Teams</label>
+        <input type="radio" id="3" name="topic" value="3" checked />
+        <label for="3">NHL Teams</label>
       </div>
-
       <div>
-        <input type="radio" id="movies" name="topics" value="movies" />
-        <label for="movies">Movies</label>
+        <input type="radio" id="0" name="topic" value="0" />
+        <label for="0">Movies</label>
       </div>
-
       <div>
-        <input type="radio" id="words" name="topics" value="words" />
-        <label for="words">Words</label>
+        <input type="radio" id="6" name="topic" value="6" />
+        <label for="6">Words</label>
       </div>
       <br>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit" >Submit</button>
       </div>
     </fieldset>
   </form>
-<pre id="log"></pre>
-
+<pre id="log" hidden></pre>
 
 
 </body>
-
 </html>

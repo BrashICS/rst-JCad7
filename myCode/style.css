@@ -1,10 +1,16 @@
 h1 {
   text-align: center;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
-
-
+fieldset {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  position: relative;
+}
+button {
+  margin-left: 15px;
+}
