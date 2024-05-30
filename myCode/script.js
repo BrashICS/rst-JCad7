@@ -5,8 +5,6 @@ Author: Julian Cadieux
 */
 'use strict'
 
-
-
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 
 const form = document.querySelector("form")
