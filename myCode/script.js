@@ -33,13 +33,19 @@ form.addEventListener(
   false,
 );
 
-let dashes = [0]
+let dashes = ""
 function createGraphics() {
-  dashes = [title.length]
+  document.getElementById("underscore").event("submit", createGraphics)
 
-  for (let i = 0;i < title.length; i++) {
-    dashes.push(" _ ")
-    console.log(dashes)
+  for (let i = 0; i <title.length; i ++) {
+    if (title[i] == " ") {
+      dashes += " "
+    } else {
+      dashes += " _ "
+    }
   }
+  document.getElementById("underscore").innerHTML = "" + invisible.split()
+  invisible = invisible.split("")
+  console.log("")
 }
 
