@@ -5,25 +5,9 @@ Author: Julian Cadieux
 */
 'use strict'
 
-let title = ""
-let dashes = ""
-let invisible = ""
+let title = " "
+let dashes = " "
 
-
-function createGraphics() {
-  document.getElementById("underscore")
-
-  for (let i = 0; i < title.length; i++) {
-    if (title[i] == " ") {
-      dashes += (" _ ")
-    } else {
-      dashes += (" ")
-    }
-  }
-  // document.getElementById("underscore").innerHTML = "" + invisible.split()
-  // invisible = invisible.split("")
-  // console.log("")
-}
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 const form = document.querySelector("form")
@@ -45,8 +29,22 @@ form.addEventListener(
     title = getTitle(parseInt(output[6]))
     console.log(title)
 
+
     createGraphics()
+
   },
   false,
 );
 
+
+function createGraphics () {
+  document.getElementById("underscore").innerHTML = " "
+    for (let i = 0; i < title.length; i++) {
+      if (title[i] == " ") {
+        dashes += (" ")
+      } else {
+        dashes += ("_")
+      }
+      document.getElementById("underscore").innerHTML = dashes
+    }
+}
