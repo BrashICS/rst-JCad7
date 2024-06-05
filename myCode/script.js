@@ -29,14 +29,13 @@ form.addEventListener(
     title = getTitle(parseInt(output[6]))
     console.log(title)
 
-
     createGraphics()
 
   },
   false,
 );
 
-
+// This function is used to create the dashed lines of the hidden word that the letters will be displayed on when typed in.
 function createGraphics () {
   document.getElementById("underscore").innerHTML = " "
     for (let i = 0; i < title.length; i++) {
@@ -49,7 +48,7 @@ function createGraphics () {
     }
 }
 
-function createHangman () {
-  document.getElementById("hangmanPic")
+function keyTyper (event) {
+  
 
 }

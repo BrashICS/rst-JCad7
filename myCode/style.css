@@ -18,3 +18,9 @@ button {
   letter-spacing: 5px;
   font-size: 50pt;
 }
+#hangThing {
+  max-width: 50%;
+  max-height: auto;
+  margin: -70px;
+
+}
