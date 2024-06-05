@@ -48,3 +48,8 @@ function createGraphics () {
       document.getElementById("underscore").innerHTML = dashes
     }
 }
+
+function createHangman () {
+  document.getElementById("hangmanPic")
+
+}
