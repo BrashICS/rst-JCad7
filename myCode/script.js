@@ -5,9 +5,10 @@ Author: Julian Cadieux
 */
 'use strict'
 
-let title = " "
+let title = []
 let dashes = []
 let guesses = " "
+let key =
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 
@@ -42,9 +43,9 @@ function createGraphics () {
   document.getElementById("underscore")
     for (let i = 0; i < title.length; i++) {
       if (title[i] == " ") {
-        dashes += [" "]
+        dashes.push(" ")
       } else {
-        dashes += ["_"]
+        dashes.push("_")
       }
       document.getElementById("underscore").innerHTML = dashes
     }
@@ -52,17 +53,12 @@ function createGraphics () {
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
-  console.log(event.key)
-
-  for (let x = 0; x < title.length; x++)
-    if (title[x] == event.key) {
-      dashes[x] = [event.key]
-  }
-
-
   if (event.key == "Enter") {
-    guesses += 1
-
+    for (let x = 0; x < title.length; x++)
+      if (title[x] == event.key) {
+        dashes.push(event.key)
+    }
   }
+  console.log(event.key)
 
 }
