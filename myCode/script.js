@@ -42,7 +42,7 @@ form.addEventListener(
 function createGraphics () {
   document.getElementById("underscore")
     for (let i = 0; i < title.length; i++) {
-      if (title[i] == " ") {
+      if (title[i] === " ") {
         dashes.push(" ")
       } else {
         dashes.push("_")
@@ -53,12 +53,12 @@ function createGraphics () {
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
+  document.getElementById("underscore").innerHTML = dashes
   if (event.key == "Enter") {
     for (let x = 0; x < title.length; x++)
-      if (title[x] == event.key) {
+      if (event.key == title[x]) {
         dashes.push(event.key)
     }
   }
   console.log(event.key)
-
 }
