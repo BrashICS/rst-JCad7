@@ -8,7 +8,8 @@ Author: Julian Cadieux
 let title = []
 let dashes = []
 let guesses = " "
-let key =
+let key = " "
+let letter = " "
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 
@@ -34,6 +35,7 @@ form.addEventListener(
 
     createGraphics()
 
+
   },
   false,
 );
@@ -49,16 +51,38 @@ function createGraphics () {
       }
       document.getElementById("underscore").innerHTML = dashes
     }
+    console.log(dashes)
+
 }
+
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
-  document.getElementById("underscore").innerHTML = dashes
-  if (event.key == "Enter") {
-    for (let x = 0; x < title.length; x++)
-      if (event.key == title[x]) {
-        dashes.push(event.key)
-    }
-  }
+  document.getElementById("underscore")
+    if (document.getElementById("answerBox").value == 0) {
+      for (let i = 0; i < title.length; i++) {
+        if (title[i] == event.key) {
+          dashes[i] = event.key
+        } else if (title[i] != event) {
+          guesses++
+          imageloader()
+        }
+        document.getElementById("underscore").innerHTML = dashes
+      }
+    } else return(-1)
+
   console.log(event.key)
+
 }
+
+function imageloader() {
+  
+}
+
+
+// function victory(){
+//   if (dashes = title) {
+
+//   }
+// }
+
