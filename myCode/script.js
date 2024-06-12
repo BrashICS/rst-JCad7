@@ -7,10 +7,10 @@ Author: Julian Cadieux
 
 let title = []
 let dashes = []
-let guesses = " "
+let guesses = 0
 let key = " "
 let letter = " "
-let value = " "
+let answer =
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 
@@ -59,48 +59,65 @@ function createGraphics () {
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
-  value = false
+  let userinput = event.key
   document.getElementById("underscore")
     if (document.getElementById("answerBox").value == 0) {
       for (let i = 0; i < title.length; i++) {
-        if (title[i] == event.key) {
-          dashes[i] = event.key
-          value = true
-        } else if (title[i] != event) {
-          guesses++
-          value = false
-          imageloader()
+        if (title[i] == userinput) {
+          dashes[i] = userinput
+          answer = true
+        } else if (title[i] !== userinput) {
+            answer = false
+            guesses++
+            if (answer == false) {
+              if (guesses === 1) {
+                console.log(guesses)
+                document.getElementById("body1").hidden = !document.getElementById("body1").hidden
+
+              }
+              if (guesses === 2) {
+                console.log(guesses)
+                document.getElementById("body1").hidden = true
+                document.getElementById("body2").hidden = !document.getElementById("body2").hidden
+
+              }
+              if (guesses === 3) {
+                console.log(guesses)
+                document.getElementById("body2").hidden = true
+                document.getElementById("body3").hidden = !document.getElementById("body3").hidden
+
+              }
+              if (guesses === 4) {
+                console.log(guesses)
+                document.getElementById("body3").hidden = true
+                document.getElementById("body4").hidden = !document.getElementById("body4").hidden
+
+              }
+              if (guesses === 5) {
+                console.log(guesses)
+                document.getElementById("body4").hidden = true
+                document.getElementById("body5").hidden = !document.getElementById("body5").hidden
+
+              }
+              if (guesses === 6) {
+                console.log(guesses)
+                document.getElementById("body5").hidden = true
+                document.getElementById("body6").hidden = !document.getElementById("body6").hidden
+
+              }
+
+            }
         }
         document.getElementById("underscore").innerHTML = dashes.join("")
+        document.getElementById("answerBox").value = ""
       }
-    } else return(-1)
+
+    }
 
   console.log(event.key)
-
 }
 
-function imageloader() {
-  if (value == false) {
-    if (guesses = 1) {
-      document.getElementById("body1").hidden = !document.getElementById("body1").hidden
-    }
-    if (guesses = 2) {
-      document.getElementById("body2").hidden = !document.getElementById("body2").hidden
-    }
-    if (guesses = 3) {
-      document.getElementById("body3").hidden = !document.getElementById("body3").hidden
-    }
-    if (guesses = 4) {
-      document.getElementById("body4").hidden = !document.getElementById("body4").hidden
-    }
-    if (guesses = 5) {
-      document.getElementById("body5").hidden = !document.getElementById("body5").hidden
-    }
-    if (guesses = 6) {
-      document.getElementById("body6").hidden = !document.getElementById("body6").hidden
-    }
-  }
-}
+
 
 
 function victory(){
