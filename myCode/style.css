@@ -14,18 +14,66 @@ fieldset {
 button {
   margin-left: 15px;
 }
-#underscore {
-  letter-spacing: 5px;
-  font-size: 50pt;
 
+.container {
+  position: relative;
 }
 #hangThing {
-  max-width: 50%;
+  position: absolute;
+  max-width: 58%;
   max-height: auto;
+  float: left;
   margin: -70px;
+  z-index: -1;
+}
+#body1 {
+  z-index: 2;
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
 
 }
+#body2 {
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
+  z-index: 3;
+}#body3 {
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
+  z-index: 4;
+}#body4 {
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
+  z-index: 5;
+}#body5 {
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
+  z-index: 6;
+}#body6 {
+  max-width: 25%;
+  max-height: auto;
+  float: left;
+  margin-left: -60px;
+  z-index: 7;
+}
+
 #answerBox {
   float: right;
   margin-right: 400px;
+}
+#underscore {
+
+  margin-top: 300px;
+  padding-left: 600px;
+  letter-spacing: 5px;
+  font-size: 50pt;
 }
