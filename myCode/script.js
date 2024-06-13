@@ -12,6 +12,7 @@ let key = " "
 let letter = " "
 let answer =
 
+
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
@@ -61,56 +62,50 @@ function createGraphics () {
 function keyTyper (event) {
   let userinput = event.key
   document.getElementById("underscore")
-    if (document.getElementById("answerBox").value == 0) {
+    if (document.getElementById("answerBox").value == 0 ) {
       for (let i = 0; i < title.length; i++) {
         if (title[i] == userinput) {
           dashes[i] = userinput
           answer = true
-        } else if (title[i] !== userinput) {
+        } else if (title[i] != userinput) {
             answer = false
-            guesses++
-            if (answer == false) {
-              if (guesses === 1) {
+            guesses ++
+              if (answer == false) {
+              if (guesses == 1) {
                 console.log(guesses)
                 document.getElementById("body1").hidden = !document.getElementById("body1").hidden
-
               }
-              if (guesses === 2) {
+              if (guesses == 2) {
                 console.log(guesses)
                 document.getElementById("body1").hidden = true
                 document.getElementById("body2").hidden = !document.getElementById("body2").hidden
-
               }
-              if (guesses === 3) {
+              if (guesses == 3) {
                 console.log(guesses)
                 document.getElementById("body2").hidden = true
                 document.getElementById("body3").hidden = !document.getElementById("body3").hidden
-
               }
-              if (guesses === 4) {
+              if (guesses == 4) {
                 console.log(guesses)
                 document.getElementById("body3").hidden = true
                 document.getElementById("body4").hidden = !document.getElementById("body4").hidden
-
               }
-              if (guesses === 5) {
+              if (guesses == 5) {
                 console.log(guesses)
                 document.getElementById("body4").hidden = true
                 document.getElementById("body5").hidden = !document.getElementById("body5").hidden
 
               }
-              if (guesses === 6) {
+              if (guesses == 6) {
                 console.log(guesses)
                 document.getElementById("body5").hidden = true
                 document.getElementById("body6").hidden = !document.getElementById("body6").hidden
-
               }
-
             }
         }
-        document.getElementById("underscore").innerHTML = dashes.join("")
-        document.getElementById("answerBox").value = ""
       }
+        document.getElementById("underscore").innerHTML = dashes.join("")
+        document.getElementById("answerBox").innerHTML = ""
 
     }
 
