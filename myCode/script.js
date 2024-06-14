@@ -60,48 +60,48 @@ function createGraphics () {
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
-  let userinput = event.key
   document.getElementById("underscore")
     if (document.getElementById("answerBox").value == 0 ) {
       for (let i = 0; i < title.length; i++) {
-        if (title[i] == userinput) {
-          dashes[i] = userinput
+        answer = true
+        if (title[i] == event.key) {
+          dashes[i] = event.key
           answer = true
-        } else if (title[i] != userinput) {
+        } else if (event.key != title[i]) {
             answer = false
-            guesses ++
+            guesses++
               if (answer == false) {
-              if (guesses == 1) {
-                console.log(guesses)
-                document.getElementById("body1").hidden = !document.getElementById("body1").hidden
-              }
-              if (guesses == 2) {
-                console.log(guesses)
-                document.getElementById("body1").hidden = true
-                document.getElementById("body2").hidden = !document.getElementById("body2").hidden
-              }
-              if (guesses == 3) {
-                console.log(guesses)
-                document.getElementById("body2").hidden = true
-                document.getElementById("body3").hidden = !document.getElementById("body3").hidden
-              }
-              if (guesses == 4) {
-                console.log(guesses)
-                document.getElementById("body3").hidden = true
-                document.getElementById("body4").hidden = !document.getElementById("body4").hidden
-              }
-              if (guesses == 5) {
-                console.log(guesses)
-                document.getElementById("body4").hidden = true
-                document.getElementById("body5").hidden = !document.getElementById("body5").hidden
+                if (guesses == 1) {
+                  console.log(guesses)
+                  document.getElementById("body1").hidden = !document.getElementById("body1").hidden
+                }
+                if (guesses == 2) {
+                  console.log(guesses)
+                  document.getElementById("body1").hidden = true
+                  document.getElementById("body2").hidden = !document.getElementById("body2").hidden
+                }
+                if (guesses == 3) {
+                  console.log(guesses)
+                  document.getElementById("body2").hidden = true
+                  document.getElementById("body3").hidden = !document.getElementById("body3").hidden
+                }
+                if (guesses == 4) {
+                  console.log(guesses)
+                  document.getElementById("body3").hidden = true
+                  document.getElementById("body4").hidden = !document.getElementById("body4").hidden
+                }
+                if (guesses == 5) {
+                  console.log(guesses)
+                  document.getElementById("body4").hidden = true
+                  document.getElementById("body5").hidden = !document.getElementById("body5").hidden
 
+                }
+                if (guesses == 6) {
+                  console.log(guesses)
+                  document.getElementById("body5").hidden = true
+                  document.getElementById("body6").hidden = !document.getElementById("body6").hidden
+                }
               }
-              if (guesses == 6) {
-                console.log(guesses)
-                document.getElementById("body5").hidden = true
-                document.getElementById("body6").hidden = !document.getElementById("body6").hidden
-              }
-            }
         }
       }
         document.getElementById("underscore").innerHTML = dashes.join("")
