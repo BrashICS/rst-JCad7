@@ -17,6 +17,7 @@ document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 document.getElementById("finalGuessText").addEventListener("keydown", victory)
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+// This form is used to allow the user to select their word.
 const form = document.querySelector("form")
 const log = document.querySelector("#log")
 
@@ -55,7 +56,8 @@ function createGraphics () {
 
 }
 
-// This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
+// This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong.
+// When they get it right it will add the letter they selected to the dashes on the screen, otherwise it will load a new body part image.
 function keyTyper (event) {
   if (event.key === "Enter") {
     letter = document.getElementById("answerBox").value;
