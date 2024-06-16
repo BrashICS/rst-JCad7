@@ -1,11 +1,11 @@
 /*
 Final Project (Rich Summative Task)
-Game script.js
+Game script: script.js
 Author: Julian Cadieux
 */
 'use strict'
 
-let title = []
+let title = ""
 let dashes = []
 let guesses = 0
 let letter = " "
@@ -14,6 +14,7 @@ let word = " "
 let input = []
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
+document.getElementById("finalGuessText").addEventListener("keydown", victory)
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 const form = document.querySelector("form")
@@ -54,16 +55,15 @@ function createGraphics () {
 
 }
 
-
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong
 function keyTyper (event) {
   if (event.key === "Enter") {
-    letter = document.getElementById("answerbox").value
-    value = false
+    letter = document.getElementById("answerBox").value;
+    let value = false
     for (let i = 0; i <title.length; i++) {
       if (title[i] == letter) {
         input.push(letter)
-        dashes[i] = event.key
+        dashes[i] = letter
         for (let x = 0; x < dashes.length; x++){
           word += dashes[x]
         }
@@ -73,7 +73,7 @@ function keyTyper (event) {
         value = true
       }
     }
-    if (value = false) {
+    if (value == false) {
       guesses++;
     }
     if (guesses == 1) {
@@ -105,37 +105,18 @@ function keyTyper (event) {
       console.log(guesses)
       document.getElementById("body5").hidden = true
       document.getElementById("body6").hidden = !document.getElementById("body6").hidden
-
+      alert ('You have run out of guesses! Click "OK" to try again. (Refreshes page)')
+        window.location.reload()
     }
   }
-
-
-  //   let answer = false
-  //   if (document.getElementById("answerBox").value == 0 ) {
-  //     for (let i = 0; i < title.length; i++) {
-  //       if (title[i] == event.key) {
-  //         dashes[i] = event.key
-  //         answer = true
-  //       }
-  //           if (answer == false) {
-  //             guesses++
-
-  //             }
-
-  //     }
-
-  //       document.getElementById("answerBox").innerHTML = ""
-
-  //   }
-  // console.log(event.key)
 }
 
-
-
-
-function victory(){
-  if (dashes = title) {
-
-  }
+// This function is used to allow the user to enter their final guess into a text box, when they do it will alert the user and when they press 'OK' it will refresh the page.
+function victory(event) {
+  if (event.key == "Enter" )
+    if (document.getElementById("finalGuessText").value == title) {
+      alert ('You won!')
+        window.location.reload()
+    }
 }
 

@@ -14,7 +14,6 @@ fieldset {
 button {
   margin-left: 15px;
 }
-
 .container {
   position: relative;
 }
@@ -32,7 +31,6 @@ button {
   max-height: auto;
   float: left;
   margin-left: -60px;
-
 }
 #body2 {
   max-width: 25%;
@@ -65,15 +63,22 @@ button {
   margin-left: -60px;
   z-index: 7;
 }
-
-#answerBox {
+#textbox {
   float: right;
-  margin-right: 400px;
+  margin-right: 500px;
+}
+#finalGuesser {
+  float: right;
+  margin-top: 100px;
+
 }
 #underscore {
-
   margin-top: 300px;
   padding-left: 600px;
   letter-spacing: 5px;
   font-size: 50pt;
+}
+#backBtn {
+  position: absolute;
+  bottom: 20px;
 }
