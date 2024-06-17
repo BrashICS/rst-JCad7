@@ -53,7 +53,6 @@ function createGraphics () {
       }
       document.getElementById("underscore").innerHTML = dashes.join("")
     }
-
 }
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong.
@@ -73,10 +72,12 @@ function keyTyper (event) {
         document.getElementById("underscore").innerHTML = "" + dashes.join("")
         console.log(dashes)
         value = true
+        document.getElementById("characters").innerText = letter
       }
     }
     if (value == false) {
       guesses++;
+      document.getElementById("characters").innerText = letter
     }
     if (guesses == 1) {
       console.log(guesses)
@@ -84,28 +85,22 @@ function keyTyper (event) {
     }
     if (guesses == 2) {
       console.log(guesses)
-      document.getElementById("body1").hidden = true
       document.getElementById("body2").hidden = !document.getElementById("body2").hidden
     }
     if (guesses == 3) {
       console.log(guesses)
-      document.getElementById("body2").hidden = true
       document.getElementById("body3").hidden = !document.getElementById("body3").hidden
     }
     if (guesses == 4) {
       console.log(guesses)
-      document.getElementById("body3").hidden = true
       document.getElementById("body4").hidden = !document.getElementById("body4").hidden
     }
     if (guesses == 5) {
       console.log(guesses)
-      document.getElementById("body4").hidden = true
       document.getElementById("body5").hidden = !document.getElementById("body5").hidden
-
     }
     if (guesses == 6) {
       console.log(guesses)
-      document.getElementById("body5").hidden = true
       document.getElementById("body6").hidden = !document.getElementById("body6").hidden
       alert ('You have run out of guesses! Click "OK" to try again. (Refreshes page)')
         window.location.reload()
@@ -117,8 +112,11 @@ function keyTyper (event) {
 function victory(event) {
   if (event.key == "Enter" )
     if (document.getElementById("finalGuessText").value == title) {
-      alert ('You won!')
+      alert ('You won! Click "OK" to restart. (Refreshes page)')
         window.location.reload()
+    } else {
+      alert ('Incorrect!')
     }
+
 }
 

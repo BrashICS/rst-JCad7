@@ -1,20 +1,31 @@
 h1 {
-
   text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 a {
   text-decoration: none;
   color: black;
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+#mainBtns {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 fieldset {
   display: flex;
   align-items: flex-start;
   margin-bottom: 5px;
   position: relative;
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 button {
-
   margin-left: 15px;
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 .container {
   position: relative;
@@ -28,6 +39,7 @@ button {
   z-index: -1;
 }
 #body1 {
+  position: relative;
   z-index: 2;
   max-width: 25%;
   max-height: auto;
@@ -35,6 +47,7 @@ button {
   margin-left: -60px;
 }
 #body2 {
+  position: relative;
   max-width: 25%;
   max-height: auto;
   float: left;
@@ -68,21 +81,30 @@ button {
 #textbox {
   float: right;
   margin-right: 500px;
-
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 #finalGuesser {
   float: right;
   margin-top: 100px;
   position: absolute;
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 #underscore {
   position: absolute;
   margin-top: 300px;
   padding-left: 600px;
-  letter-spacing: 5px;
-  font-size: 50pt;
+  letter-spacing: 7px;
+  font-size: 30pt;
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 #backBtn {
   position: absolute;
   bottom: 20px;
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+h4 {
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+ul {
+  font-family: "Comic Sans MS", "Comic Sans";
 }
