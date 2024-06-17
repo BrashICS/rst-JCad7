@@ -6,6 +6,7 @@ Author: Julian Cadieux
 'use strict'
 
 let title = ""
+
 let dashes = []
 let guesses = 0
 let letter = " "
@@ -36,8 +37,9 @@ form.addEventListener(
 
     title = getTitle(parseInt(output[6]))
     console.log(title)
-
+    title = title.toLowerCase()
     createGraphics()
+    document.getElementById("textbox").hidden = false
   },
   false,
 );
@@ -59,7 +61,7 @@ function createGraphics () {
 // When they get it right it will add the letter they selected to the dashes on the screen, otherwise it will load a new body part image.
 function keyTyper (event) {
   if (event.key === "Enter") {
-    letter = document.getElementById("answerBox").value;
+    letter = document.getElementById("answerBox").value.toLowerCase();
     let value = false
     for (let i = 0; i <title.length; i++) {
       if (title[i] == letter) {
@@ -74,6 +76,7 @@ function keyTyper (event) {
         value = true
         document.getElementById("characters").innerText = letter
       }
+//
     }
     if (value == false) {
       guesses++;
@@ -81,28 +84,30 @@ function keyTyper (event) {
     }
     if (guesses == 1) {
       console.log(guesses)
-      document.getElementById("body1").hidden = !document.getElementById("body1").hidden
+      document.getElementById("hangThing").src= "/images/body1.png"
     }
-    if (guesses == 2) {
+    else if (guesses == 2) {
       console.log(guesses)
-      document.getElementById("body2").hidden = !document.getElementById("body2").hidden
+      document.getElementById("hangThing").src= "/images/body2.png"
     }
-    if (guesses == 3) {
+    else if (guesses == 3) {
       console.log(guesses)
-      document.getElementById("body3").hidden = !document.getElementById("body3").hidden
+      document.getElementById("hangThing").src= "/images/body3.png"
     }
-    if (guesses == 4) {
+    else if (guesses == 4) {
       console.log(guesses)
-      document.getElementById("body4").hidden = !document.getElementById("body4").hidden
+      document.getElementById("hangThing").src= "/images/body4.png"
     }
-    if (guesses == 5) {
+    else if (guesses == 5) {
       console.log(guesses)
-      document.getElementById("body5").hidden = !document.getElementById("body5").hidden
+      document.getElementById("hangThing").src= "/images/body5.png"
+    }
+    else if (guesses == 6) {
+      console.log(guesses)
+      document.getElementById("hangThing").src= "/images/body6.png"
     }
     if (guesses == 6) {
-      console.log(guesses)
-      document.getElementById("body6").hidden = !document.getElementById("body6").hidden
-      alert ('You have run out of guesses! Click "OK" to try again. (Refreshes page)')
+      alert ('You have run out of guesses! The word was ' + title + '. Click "OK" to try again. (Refreshes page)')
         window.location.reload()
     }
   }
@@ -111,11 +116,12 @@ function keyTyper (event) {
 // This function is used to allow the user to enter their final guess into a text box, when they do it will alert the user and when they press 'OK' it will refresh the page.
 function victory(event) {
   if (event.key == "Enter" )
-    if (document.getElementById("finalGuessText").value == title) {
+    if (document.getElementById("finalGuessText").value.toLowerCase() == title) {
       alert ('You won! Click "OK" to restart. (Refreshes page)')
         window.location.reload()
     } else {
-      alert ('Incorrect!')
+      alert ('Incorrect! The word was '+ title)
+        window.location.reload
     }
 
 }

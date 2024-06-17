@@ -38,46 +38,6 @@ button {
   margin: -70px;
   z-index: -1;
 }
-#body1 {
-  position: relative;
-  z-index: 2;
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-}
-#body2 {
-  position: relative;
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-  z-index: 3;
-}#body3 {
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-  z-index: 4;
-}#body4 {
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-  z-index: 5;
-}#body5 {
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-  z-index: 6;
-}#body6 {
-  max-width: 25%;
-  max-height: auto;
-  float: left;
-  margin-left: -60px;
-  z-index: 7;
-}
 #textbox {
   float: right;
   margin-right: 500px;
