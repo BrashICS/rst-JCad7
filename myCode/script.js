@@ -6,7 +6,6 @@ Author: Julian Cadieux
 'use strict'
 
 let title = ""
-
 let dashes = []
 let guesses = 0
 let letter = " "
@@ -16,7 +15,6 @@ let input = []
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 document.getElementById("finalGuessText").addEventListener("keydown", victory)
-
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 // This form is used to allow the user to select their word.
