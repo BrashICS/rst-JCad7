@@ -83,27 +83,27 @@ function keyTyper (event) {
     }
     if (guesses == 1) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body1.png"
+      document.getElementById("hangThing").src= "../images/body1.png"
     }
     else if (guesses == 2) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body2.png"
+      document.getElementById("hangThing").src= "../images/body2.png"
     }
     else if (guesses == 3) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body3.png"
+      document.getElementById("hangThing").src= "../images/body3.png"
     }
     else if (guesses == 4) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body4.png"
+      document.getElementById("hangThing").src= "../images/body4.png"
     }
     else if (guesses == 5) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body5.png"
+      document.getElementById("hangThing").src= "../images/body5.png"
     }
     else if (guesses == 6) {
       console.log(guesses)
-      document.getElementById("hangThing").src= "images/body6.png"
+      document.getElementById("hangThing").src= "../images/body6.png"
     }
     if (guesses == 6) {
       alert ('You have run out of guesses! The word was ' + title + '. Click "OK" to try again. (Refreshes page)')
