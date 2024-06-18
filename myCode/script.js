@@ -110,6 +110,7 @@ function keyTyper (event) {
         window.location.reload()
     }
   }
+  document.getElementById("answerBox").value = ""
 }
 
 // This function is used to allow the user to enter their final guess into a text box, when they do it will alert the user and when they press 'OK' it will refresh the page.
