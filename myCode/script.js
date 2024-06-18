@@ -120,7 +120,7 @@ function victory(event) {
         window.location.reload()
     } else {
       alert ('Incorrect! The word was '+ title)
-        window.location.reload
+        window.location.reload()
     }
 
 }
