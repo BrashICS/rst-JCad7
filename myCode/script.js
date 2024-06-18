@@ -74,12 +74,12 @@ function keyTyper (event) {
         document.getElementById("underscore").innerHTML = "" + dashes.join("")
         console.log(dashes)
         value = true
-        document.getElementById("characters").innerText = letter
+
       }
     }
     if (value == false) {
       guesses++;
-      document.getElementById("characters").innerText = letter
+      document.getElementById("characters").innerText = letter.join(", ")
     }
     if (guesses == 1) {
       console.log(guesses)
