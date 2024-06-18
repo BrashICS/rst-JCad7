@@ -16,6 +16,7 @@ let input = []
 
 document.getElementById("answerBox").addEventListener("keydown", keyTyper)
 document.getElementById("finalGuessText").addEventListener("keydown", victory)
+let usedLettersDisplay = document.getElementById("characters"); // hows which letters were used
 
 // Learned how to get the user input from the "radio" and the submit button from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 // This form is used to allow the user to select their word.
@@ -74,12 +75,12 @@ function keyTyper (event) {
         document.getElementById("underscore").innerHTML = "" + dashes.join("")
         console.log(dashes)
         value = true
-
+        updateUsedLetters()
       }
     }
     if (value == false) {
       guesses++;
-      document.getElementById("characters").innerText = letter.join(", ")
+      updateUsedLetters()
     }
     if (guesses == 1) {
       console.log(guesses)
@@ -124,4 +125,7 @@ function victory(event) {
         window.location.reload
     }
 
+}
+function updateUsedLetters(display, lettersArray) {
+  display.textContent = "characters: " + lettersArray.join(', ');
 }
