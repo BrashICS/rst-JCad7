@@ -36,7 +36,7 @@ form.addEventListener(
     console.log(output[6])
 
     title = getTitle(parseInt(output[6]))
-    console.log(title)
+    //console.log(title)
     title = title.toLowerCase()
     createGraphics()
     document.getElementById("textbox").hidden = false
@@ -58,7 +58,7 @@ function createGraphics () {
 }
 
 // This function is used to listen for certain key pressess as well as weather or not the guess was right or wrong.
-// When they get it right it will add the letter they selected to the dashes on the screen, otherwise it will load a new body part image.
+// When they get it right it will add the letter they selected to the dashes on the screen, otherwise it will load a new hangman image.
 function keyTyper (event) {
   if (event.key === "Enter") {
     letter = document.getElementById("answerBox").value.toLowerCase();
@@ -76,7 +76,6 @@ function keyTyper (event) {
         value = true
         document.getElementById("characters").innerText = letter
       }
-//
     }
     if (value == false) {
       guesses++;
